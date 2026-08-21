@@ -18,7 +18,7 @@
 <style scoped>
 .box{
   width: 400px;
-  height: 400px;
+  
   background-color: #fff;
   border: 1px solid black;
   margin: auto;
