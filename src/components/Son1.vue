@@ -1,9 +1,13 @@
-<script setup></script>
+<script setup>
+import { Store } from '@/store';
+const useStore = Store()
+
+</script>
 
 <template>
     <div class="row">
-      <h3>我是Son1 - 0</h3>
-      <button class="btn">+</button>
+      <h3>我是Son1 - {{ useStore.count }}</h3>
+      <button @click="useStore.add" class="btn">+</button>
     </div>
 </template>
 
