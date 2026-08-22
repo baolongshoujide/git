@@ -3,6 +3,7 @@ import { computed, ref } from "vue";
 
 export const Store = defineStore('one',()=>{
     const count = ref(100)
+    const count2 = ref(100)
 
     const add =()=>{
         count.value++
@@ -14,5 +15,12 @@ export const Store = defineStore('one',()=>{
 
 
 
-    return{count,add,sub,double}
+    return{count,count2,add,sub,double}
+},{
+    // persist:true
+    persist:{
+        // 修改本地存储的名字
+        key:'index.one',
+        pick:['count2']
+    }
 })

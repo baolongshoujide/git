@@ -5,13 +5,13 @@
   import {storeToRefs} from 'pinia'
   const useone = Store()
   console.log(useone);
-  // 解构后丢失响应式
-  const {count,double} = storeToRefs(useone)
+  // 解构后丢失响应式.响应式是对这个store对象才有。解构后相当于修改地址，不是原对象里的东西
+  const {count,double,count2} = storeToRefs(useone)
 </script>
 
 <template>
     <div class="box">
-      <h3>App.vue根组件 - {{ count }}-{{ double }}</h3>
+      <h3>App.vue根组件 - {{ count }}-{{ double }} - {{ count2 }}</h3>
       <Son1></Son1>
       <Son2></Son2>
     </div>
